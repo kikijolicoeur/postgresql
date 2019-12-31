@@ -1,2 +1,1 @@
-# postgresql
-postgresql
+https://kb.dalibo.com/vmware
