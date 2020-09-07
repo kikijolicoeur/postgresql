@@ -885,4 +885,10 @@ pg_walfile_name_offset(lsn pg_lsn)
 pg_wal_lsn_diff(lsn pg_lsn, lsn pg_lsn)
 
 
-
+L'extension pgstattuple permet d'ajouter une fonction nommée pgstatindex() qui renvoie
+différentes statistiques sur un index B-Tree. Ces statistiques sont surtout utilisées dans
+le cadre de la maintenance, notamment pour savoir si un index a besoin d'être réindexé.
+Toujours dans ce cadre, il est possible de comparer les valeurs des colonnes live_items
+et dead_items en retour de la fonction bt_page_stats() pour savoir si une réindexation
+est intéressante. La colonne free_size permet d'obtenir cette information encore plus
+simplement.
